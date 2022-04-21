@@ -19,6 +19,7 @@
                 <td> <%= student.email %> </td>
                 <td> <%= student.city %> </td>
                 <td> <%= link_to "View", student %> </td>
+                <td> <%= link_to "Edit", edit_student_path(student) %> </td>
             </tr>
         <% end %>
     </tbody>

@@ -5,4 +5,4 @@
 <p><strong>Email : </strong> <%= @student.email %> </p>
 <p><strong>City : </strong> <%= @student.city %> </p>
 
-<p> <%= link_to "Back", students_path %></p>
+<p> <%= link_to "Back", students_path %> | <%= link_to "Edit", edit_student_path(@student) %></p> 
