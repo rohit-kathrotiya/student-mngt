@@ -31,3 +31,8 @@ student = Student.create(
         city: "Surat #{i+1}"
     )
 end
+
+Student.all.each do |student|
+    student.blogs.create(title: "Blogs of student #{student.id}", content: "this is blog content")
+    student.blogs.create(title: "Blogs of student #{student.id}", content: "this is blog content")
+end
