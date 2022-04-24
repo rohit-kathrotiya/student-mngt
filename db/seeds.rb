@@ -36,3 +36,9 @@ Student.all.each do |student|
     student.blogs.create(title: "Blogs of student #{student.id}", content: "this is blog content")
     student.blogs.create(title: "Blogs of student #{student.id}", content: "this is blog content")
 end
+
+Course.create(name: "PHP", description: "pending")
+Course.create(name: "Ruby on rails", description: "pending")
+Course.create(name: "Python", description: "pending")
+Course.create(name: "Java", description: "pending")
+Course.create(name: "Javascript", description: "pending")
