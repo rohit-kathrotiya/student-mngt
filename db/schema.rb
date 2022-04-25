@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_24_144123) do
+ActiveRecord::Schema.define(version: 2022_04_25_144757) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2022_04_24_144123) do
 
   create_table "demos", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -48,4 +48,13 @@ ActiveRecord::Schema.define(version: 2022_04_24_144123) do
     t.string "city"
   end
 
+  create_table "sub_demos", force: :cascade do |t|
+    t.string "title"
+    t.integer "demo_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["demo_id"], name: "index_sub_demos_on_demo_id"
+  end
+
+  add_foreign_key "sub_demos", "demos"
 end
