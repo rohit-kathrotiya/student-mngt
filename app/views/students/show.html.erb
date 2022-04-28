@@ -1,9 +1,14 @@
 <p> <%= notice %> </p>
 <h1> Student Details </h1>
 
-<p><strong>First Name : </strong> <%= @student.first_name %> </p>
-<p><strong>Last Name : </strong> <%= @student.last_name %> </p>
+<%# instance method %>
+<p><strong>Full Name : </strong><%= @student.full_name %></p>
+
+<%# <p><strong>First Name : </strong> <%= @student.first_name %> </p>
+<%# <p><strong>Last Name : </strong> <%= @student.last_name %> </p>
 <p><strong>Email : </strong> <%= @student.email %> </p>
 <p><strong>City : </strong> <%= @student.city %> </p>
+<p><strong>DOB : </strong> <%= @student.date_of_birth %> </p>
+<p><strong>Age : </strong> <%= @student.age %> </p>
 
 <p> <%= link_to "Back", students_path %> | <%= link_to "Edit", edit_student_path(@student) %></p> 
