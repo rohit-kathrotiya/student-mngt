@@ -6,7 +6,19 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  resources :students
+  resources :students do
+    # Define member routing (it returns data of specified id)
+    member do
+      get :personal_details
+    end
+    # get :personal_details, on: :member
+
+    # Define collection routing (it returns all data)
+    collection do
+      get :active
+    end
+    # get :active, on: :collection
+  end
 
   get "welcome/about"
 
