@@ -8,4 +8,8 @@ Rails.application.routes.draw do
 
   resources :students
 
+  get "welcome/about"
+
+  get "/about" => "welcome#about"
+
 end
