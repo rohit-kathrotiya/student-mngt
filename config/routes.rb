@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   # NameSpace routing
   namespace :admin do
     resources :students
+    get 'dashboard' => 'dashboard#index'
   end
   
   # Scope Routing
