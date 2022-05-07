@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
 
+    layout 'admin'
+    
     before_action :set_student, only: %i[show edit update destroy]
     #  helper_method create an method for views and action as well. it is same like create an method in
     #  application_helper file.
