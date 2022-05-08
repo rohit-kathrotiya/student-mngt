@@ -1,29 +1,27 @@
-<p id="notice"><%= notice %></p>
+<p> <%= notice %> </p>
+<h1> Project List </h1>
 
-<h1>Projects</h1>
-
-<table>
+<p> <%= link_to "New project", new_project_path, class: 'badge badge-primary' %> </p>
+<table class="table">
+<p> <%= notice %> </p>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col" colspan="3">ACTION</th>
     </tr>
   </thead>
-
   <tbody>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+            <th scope="row"><%= project.id %></th>
+            <td><%= project.name %></td>
+            <td><%= project.description %></td>
+            <td> <%= link_to "View", project, class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Edit", edit_project_path(project), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Delete", project, method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-primary" %>
+        </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Project', new_project_path %>

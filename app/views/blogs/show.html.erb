@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
-
-<p>
-  <strong>Student:</strong>
-  <%= @blog.student_id %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<p> <%= notice %> </p>
+<div class="card text-center">
+  <div class="card-header">
+    <h4>Blog Details</h4>
+  </div>
+  <div class="card-body">
+    <%# instance method %>
+    <p><strong>Title : </strong><%= @blog.title %></p>
+    <p><strong>Content : </strong> <%= @blog.content %> </p>
+    <p><strong>Student : </strong> <%= @blog.student_id %> </p>
+  </div>
+  <div class="card-footer text-muted">
+    <%= link_to "Back", blogs_path, class: "badge badge-primary" %>
+    <%= link_to "Edit", edit_blog_path(@blog), class: "badge badge-primary" %>
+  </div>
+</div>
