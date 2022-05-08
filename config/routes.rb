@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  resources :students
+  # resources :students
 
   # resources :students do
   #   # Define member routing (it returns data of specified id)

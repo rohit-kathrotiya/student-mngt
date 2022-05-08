@@ -1,0 +1,32 @@
+<h1> Student List </h1>
+
+<p> <%= link_to "New Student", new_admin_student_path, class: 'badge badge-primary' %> </p>
+<table class="table">
+<p> <%= notice %> </p>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">FIRST NAME</th>
+      <th scope="col">LAST NAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">CITY</th>
+      <th scope="col">DATE OF BIRTH</th>
+      <th scope="col" colspan="3">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student|%>
+        <tr>
+            <th scope="row"><%= student.id %></th>
+            <td><%= student.first_name %></td>
+            <td><%= student.last_name %></td>
+            <td><%= student.email %></td>
+            <td><%= student.city %></td>
+            <td><%= student.date_of_birth %></td>
+            <td> <%= link_to "View", admin_student_path(student), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Edit", edit_admin_student_path(student), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Delete", admin_student_path(student), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn btn-primary" %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
