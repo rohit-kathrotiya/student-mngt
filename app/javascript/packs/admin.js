@@ -16,6 +16,7 @@ import $ from 'jquery';
 global.$ = jQuery;
 
 import "css/admin"
+import "@fortawesome/fontawesome-free/css/all"
 
 import "bootstrap";
 
