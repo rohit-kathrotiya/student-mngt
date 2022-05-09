@@ -4,7 +4,7 @@ class Admin::BlogsController < AdminController
     # GET /blogs or /blogs.json
     def index
       # Solution of N-1 problem "Blog.includes(:student)" 
-      @blogs = Blog.includes(:student)  
+      @blogs = Blog.includes(:student).page(params[:page])
     end
   
     # GET /blogs/1 or /blogs/1.json
