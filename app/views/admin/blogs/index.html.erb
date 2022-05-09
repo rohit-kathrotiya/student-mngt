@@ -1,0 +1,29 @@
+<h1> Blog List </h1>
+
+<p> <%= link_to "New Blog", new_admin_blog_path, class: 'badge badge-primary' %> </p>
+<table class="table">
+<p> <%= notice %> </p>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Content</th>
+      <th scope="col">Student</th>
+      <th scope="col" colspan="3">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+        <tr>
+            <th scope="row"><%= blog.id %></th>
+            <td><%= blog.title %></td>
+            <td><%= blog.content %></td>
+            <td><%= blog.student_id %></td>
+            <td> <%= link_to "View", admin_blog_path(blog), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Edit", edit_admin_blog_path(blog), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Delete", admin_blog_path(blog), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-primary" %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+

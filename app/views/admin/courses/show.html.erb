@@ -1,0 +1,15 @@
+<p> <%= notice %> </p>
+<div class="card text-center">
+  <div class="card-header">
+    <h4>Course Details</h4>
+  </div>
+  <div class="card-body">
+    <%# instance method %>
+    <p><strong>Course : </strong><%= @course.name %></p>
+    <p><strong>Description : </strong> <%= @course.description %> </p>
+  </div>
+  <div class="card-footer text-muted">
+    <%= link_to "Back", admin_courses_path, class: "badge badge-primary" %>
+    <%= link_to "Edit", edit_admin_course_path(@course), class: "badge badge-primary" %>
+  </div>
+</div>

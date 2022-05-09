@@ -1,0 +1,26 @@
+<h1> Course List </h1>
+
+<p> <%= link_to "New Course", new_admin_course_path, class: 'badge badge-primary' %> </p>
+<table class="table">
+<p> <%= notice %> </p>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col" colspan="3">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+        <tr>
+            <th scope="row"><%= course.id %></th>
+            <td><%= course.name %></td>
+            <td><%= course.description %></td>
+            <td> <%= link_to "View", admin_course_path(course), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Edit", edit_admin_course_path(course), class: "btn btn-primary" %> </td>
+            <td> <%= link_to "Delete", admin_course_path(course), method: :delete, data: { confirm: "Are you sure ?"}, class: "btn btn-primary" %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
