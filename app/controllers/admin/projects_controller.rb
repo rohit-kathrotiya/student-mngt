@@ -3,7 +3,9 @@ class Admin::ProjectsController < AdminController
   
     # GET /projects or /projects.json
     def index
-      @projects = Project.all.page(params[:page])
+      @q = Project.ransack(params[:q])
+      @projects = @q.result(distinct: true).page(params[:page])
+      # @projects = Project.all.page(params[:page])
     end
   
     # GET /projects/1 or /projects/1.json

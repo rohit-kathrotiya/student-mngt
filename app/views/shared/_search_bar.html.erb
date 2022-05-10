@@ -1,0 +1,55 @@
+<%# For Student search bar %>
+<% if @students %>
+    <%= search_form_for @q, url: :admin_students do |f| %>
+        <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <%= f.text_field :first_name_or_last_name_or_email_or_city_cont, class: "form-control bg-light border-1 small" %>
+                <div class="input-group-append">
+                    <%= f.submit class: "btn badge-primary" %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
+<%# For Project search bar %>
+<% if @projects %>
+    <%= search_form_for @q, url: :admin_projects do |f| %>
+        <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <%= f.text_field :name_or_description_cont, class: "form-control bg-light border-1 small" %>
+                <div class="input-group-append">
+                    <%= f.submit class: "btn badge-primary" %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
+<%# For Course search bar %>
+<% if @courses %>
+    <%= search_form_for @q, url: :admin_courses do |f| %>
+        <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <%= f.text_field :name_or_description_cont, class: "form-control bg-light border-1 small" %>
+                <div class="input-group-append">
+                    <%= f.submit class: "btn badge-primary" %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
+<%# For Blog search bar %>
+<% if @blogs %>
+    <%= search_form_for @q, url: :admin_blogs do |f| %>
+        <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <%= f.text_field :title_or_content_or_student_id_cont, class: "form-control bg-light border-1 small" %>
+                <div class="input-group-append">
+                    <%= f.submit class: "btn badge-primary" %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

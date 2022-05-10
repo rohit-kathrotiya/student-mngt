@@ -3,7 +3,9 @@ class Admin::CoursesController < AdminController
   
     # GET /courses or /courses.json
     def index
-      @courses = Course.all.page(params[:page])
+      @q = Course.ransack(params[:q])
+      @courses = @q.result(distinct: true).page(params[:page])
+      # @courses = Course.all.page(params[:page])
     end
   
     # GET /courses/1 or /courses/1.json
