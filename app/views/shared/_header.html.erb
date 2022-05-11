@@ -6,19 +6,18 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <% if admin_user_signed_in? %>
       <li class="nav-item active">
-        <%= link_to "HOME", students_path, class: "nav-link" %><span class="sr-only">(current)</span>
+        <%= link_to "LOGOUT", destroy_admin_user_session_path, method: :delete, class: "nav-link" %><span class="sr-only">(current)</span>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          MENU
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "Course", courses_path, class: "dropdown-item" %>
-            <%= link_to "Project", projects_path, class: "dropdown-item" %>
-            <%= link_to "Blog", blogs_path, class: "dropdown-item" %>
-        </div>
+      <% else %>
+      <li class="nav-item active">
+        <%= link_to "LOGIN", new_admin_user_session_path, class: "nav-link" %><span class="sr-only">(current)</span>
       </li>
+      <li class="nav-item active">
+        <%= link_to "REGISTER", new_admin_user_registration_path, class: "nav-link" %><span class="sr-only">(current)</span>
+      </li>
+      <% end %>
     </ul>
   </div>
 </nav>
