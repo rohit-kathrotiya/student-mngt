@@ -36,11 +36,7 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                       <% if admin_user_signed_in? %>
-                            <li class="nav-item active">
-                                <%= link_to "LOGOUT", destroy_admin_user_session_path, method: :delete, class: "nav-link" %><span class="sr-only">(current)</span>
-                            </li>
-                        <% end %>
+                       
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
