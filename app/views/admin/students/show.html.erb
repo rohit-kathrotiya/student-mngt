@@ -12,10 +12,8 @@
     <p><strong>City : </strong> <%= @student.city %> </p>
     <p><strong>DOB : </strong> <%= formate_date(@student.date_of_birth) %> </p>
     <p><strong>Age : </strong> <%= @student.age %> </p>
-    <% if @student.profile_images.attached? %>
-      <% @student.profile_images.each do |photo| %>
-      <%= image_tag photo, style: "width: 25rem;" %>
-      <% end %>
+    <% if @student.profile_image.attached? %>
+      <%= image_tag @student.profile_image, style: "width: 25rem;" %>
     <% end %>
   </div>
   <div class="card-footer text-muted">
