@@ -953,6 +953,13 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.5.tgz#c24ec8123a8e7e239ceabda29078df9c93752394"
   integrity sha512-bV4/Q7NweGFm7t3GvUFm19UF2WKmcvlOXy7AxMWEZCwDxQLagAXhUpKb1AJ6Rg88cPHqXSQHaGKr84lIMd607A==
 
+"@rails/actiontext@6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-6.1.5.tgz#29006cff520b72c6845f474540a9ea142eae6380"
+  integrity sha512-V88uyueaL4VeU0u0P3GiuM0vSBYW3pluYyI7jMmZKWfGZKCspmRLDaJE+30Bx4h3ZQJcRrOCFoTU8hK0cFmCsw==
+  dependencies:
+    "@rails/activestorage" "^6.0.0"
+
 "@rails/activestorage@^6.0.0":
   version "6.1.5"
   resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.1.5.tgz#a43929573b2ffae54857ffa3b7ac1988af42b681"
@@ -6557,6 +6564,11 @@ toidentifier@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
+
+trix@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/trix/-/trix-1.2.0.tgz#b314101abd1d8d3d5da22ae5b866a719a73a6e21"
+  integrity sha512-gJ7edoWzcnc9DBjsgeGkmotVpyVhFQTlSOmUYjwFn71NlGixAhNgsu8pVIq/jkIkbk6om0PSetc9cRJm+qU3+A==
 
 ts-pnp@^1.1.6:
   version "1.2.0"
