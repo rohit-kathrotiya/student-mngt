@@ -15,8 +15,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <% if notice %>
+            <div class="alert alert-primary" role="alert">
+              <p class="notice"><%= notice %></p>
+            </div>
+          <% end %>
+          <% if alert %>
+            <div class="alert alert-danger" role="alert">
+              <p class="alert"><%= alert %></p>
+            </div>
+          <% end %>s
           <%= yield %>
         </div>
       </div>
