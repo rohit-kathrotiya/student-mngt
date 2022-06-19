@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Making simple Student management application for learning "Ruby on Rails".
 
-Things you may want to cover:
+- Used Authentication and Authorisation
+- CRUD functions
+- Understanding Partials
+- Perform Migrations, seed and schemas
+- Implements mailers
+- Implements Associations
+- Learned Validations
+- Callback Functions
+- ActiveRecords Queries
+- Namespace and Routing
+- Custom Bootstrap Integrations
+- ActiveStorage Attachments
+- MVC architecture
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Source "APPSIMPACT ACADEMY"
